@@ -1,16 +1,14 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
-import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
-import { publicProvider } from 'wagmi/providers/public';
+import { chain, configureChains, createClient, defaultChains, defaultL2Chains, WagmiConfig } from 'wagmi';
+import { infuraProvider } from 'wagmi/providers/infura';
+
+const infuraId = process.env.INFURA_ID
 
 const { chains, provider } = configureChains(
-  [chain.mainnet],
-  [
-    jsonRpcProvider({ rpc: () => ({ http: 'https://rpc.ankr.com/eth' }) }),
-    publicProvider(),
-  ]
+  [chain.mainnet, chain.rinkeby, chain.polygon],
+  [infuraProvider({ infuraId })]
 );
 
 const { connectors } = getDefaultWallets({
@@ -27,7 +25,7 @@ const wagmiClient = createClient({
 function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider coolMode chains={chains}>
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>

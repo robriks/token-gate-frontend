@@ -1,45 +1,25 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import Image from 'next/image';
+import Header from './header';
+import Footer from './footer';
+import asciiNFT from '../public/asciiNFT.png';
+import MintButton from './mint';
 
 const Home = () => {
   return (
     <div className='py-6 justify-center text-center'>
-      <div className='flex justify-center'>
+      <Header />
+      <h1 className='text-5xl font-bold mt-10'>🚀 HotsThots 🚀</h1>
+      <div className='flex justify-center mt-8'>
         <ConnectButton />
       </div>
-
-      <h1 className='text-4xl font-bold mt-6'>🚀 create-web3-frontend</h1>
-      <InfoSection />
-    </div>
-  );
-};
-
-const InfoSection = () => {
-  return (
-    <div className='mt-10'>
-      <h2 className='text-xl font-bold'>If you need help</h2>
-      <div className='flex flex-col gap-2 mt-2'>
-        <a
-          href='https://wagmi.sh'
-          target='_blank'
-          className='underline text-gray-600'
-        >
-          Link to wagmi docs
-        </a>
-        <a
-          href='https://github.com/dhaiwat10/create-web3-frontend'
-          target='_blank'
-          className='underline text-gray-600'
-        >
-          Open an issue on Github
-        </a>
-        <a
-          href='https://twitter.com/dhaiwat10'
-          target='_blank'
-          className='underline text-gray-600'
-        >
-          DM me on Twitter
-        </a>
+      <div className='flex justify-center'>
+        <div className='mt-6 w-4/5'>
+          <Image src={asciiNFT} layout='intrinsic'></Image>
+        </div>
       </div>
+      <MintButton />
+      <Footer />
     </div>
   );
 };
