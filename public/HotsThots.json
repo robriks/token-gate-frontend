@@ -1,0 +1,19 @@
+{
+    "description": "HotsThots Husky token that grants access to a small web3 alpha discord group run by the KweenBirb",
+    "external_url": "https://hots-thots.vercel.app",
+    "image": "ar://eHzq468IAFGcsllomr9OLz4Zizy6Qf9VeUOAk3Ge6qw",
+    "name": "HotsThots Husky",
+    "attributes": [
+        {
+            "trait_type": "Build", 
+            "value": "Beefy"
+        }, 
+        {
+            "trait_type": "Disposition",
+            "value": "Thotty"
+        },
+        {
+            "trait_type": "HotS Skill",
+            "value": "God-tier"
+        }]
+}

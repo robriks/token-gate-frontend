@@ -19,7 +19,7 @@ contract HotsThots is ERC721("HotsThots", "HOTS"), Owned(msg.sender) {
     constructor(address[] memory _whitelist) {
         console.log("Deploying HotsThots membership NFT to whitelisted addresses");
         hotsFrens = _whitelist;
-        baseURI = "ar://eHzq468IAFGcsllomr9OLz4Zizy6Qf9VeUOAk3Ge6qw/";
+        baseURI = "https://ipfs.io/ipfs/QmaKFurpTEK99CBdRWUKopaWDDqvS9ZcnB8AroLotbrrwE";
         _mint(msg.sender, _idCount.current());
         _idCount.increment();
     }
@@ -35,6 +35,10 @@ contract HotsThots is ERC721("HotsThots", "HOTS"), Owned(msg.sender) {
     function changeTokenURI(string calldata newURI) public onlyOwner() {
         baseURI = newURI;
     }
+
+    // function contractURI() public view returns (string memory) {
+    //     return "https://hots-thots.vercel.app";
+    // }
 
     function claim() external {
         require(balanceOf(msg.sender) == 0, "You already own a HotsThots NFT!");

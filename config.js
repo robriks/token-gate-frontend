@@ -1,5 +1,5 @@
 module.exports = {
-    rinkeby: '0x417B69F5F7caE8EC7311E6D4dDD0970b7Cb603b8',
+    rinkeby: '0x402d16921C2E2d1E57D4314E6d3e31Dbe17a090c',
     polygon: '',
     mainnet: '',
 }

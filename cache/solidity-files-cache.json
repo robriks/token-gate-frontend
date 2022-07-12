@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/robriks/frontend/contracts/HotsThots.sol": {
-      "lastModificationDate": 1657233299100,
-      "contentHash": "67546742af17a28972ee9a8a47554310",
+      "lastModificationDate": 1657659265376,
+      "contentHash": "228f94804c9828d9e6efd2d8c1b8b6a2",
       "sourceName": "contracts/HotsThots.sol",
       "solcConfig": {
         "version": "0.8.0",
