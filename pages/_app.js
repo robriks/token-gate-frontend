@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { chain, configureChains, createClient, defaultChains, defaultL2Chains, WagmiConfig } from 'wagmi';
+import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { infuraProvider } from 'wagmi/providers/infura';
 
 const infuraId = process.env.INFURA_ID

@@ -35,11 +35,6 @@ contract HotsThots is ERC721("HotsThots", "HOTS"), Owned(msg.sender) {
     function changeTokenURI(string calldata newURI) public onlyOwner() {
         baseURI = newURI;
     }
-
-    // function contractURI() public view returns (string memory) {
-    //     return "https://hots-thots.vercel.app";
-    // }
-
     function claim() external {
         require(balanceOf(msg.sender) == 0, "You already own a HotsThots NFT!");
         for (uint i; i < hotsFrens.length; i++) {
