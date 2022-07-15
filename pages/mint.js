@@ -24,7 +24,7 @@ export default function MintButton () {
         <div className='flex justify-center mt-6'>
           <button
             className={`flex w-${36} mt-2 p-3 rounded-xl font-semibold bg-blue-300 hover:scale-105 shadow-xl justify-center text-white`}>
-              You must connect wallet first to mint
+              You must connect wallet to mint
           </button>
         </div>
       </div>

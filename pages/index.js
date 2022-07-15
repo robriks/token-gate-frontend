@@ -19,6 +19,12 @@ const Home = () => {
         </div>
       </div>
       <MintButton />
+      <div>
+        <h2 className='mt-4 text-sm'>
+          Once your mint tx confirms, head over to&nbsp;
+          <a href='https://opensea.io/collection/hotsthots' className='text-blue-600 underline'>Opensea</a> 
+          &nbsp;to view your HotsThots Husky!</h2>
+      </div>
       <Footer />
     </div>
   );
