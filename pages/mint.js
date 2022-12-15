@@ -7,7 +7,7 @@ import { InjectedConnector } from '@wagmi/core';
 export default function MintButton () {
 
     const connected = useAccount()
-    let address = addresses.rinkeby
+    let address = addresses.polygon
 
     const { data, isError, isLoading, write } = useContractWrite({
       addressOrName: address,
