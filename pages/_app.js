@@ -9,7 +9,7 @@ const infuraId = process.env.INFURA_ID
 
 const { chains, provider } = configureChains(
   [mainnet, goerli, polygon],
-  [infuraProvider({ infuraId })]
+  [infuraProvider({ apiKey: infuraId })]
 );
 
 const { connectors } = getDefaultWallets({
